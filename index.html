@@ -145,6 +145,7 @@
             const answer = document.getElementById('answer1').value.trim().toLowerCase();
             const result = document.getElementById('result1');
             if (answer === 'rayquaza') {
+                document.getElementById('puzzle0').style.display = 'none'; // Hide the rules section
                 document.getElementById('puzzle1').style.display = 'none';
                 document.getElementById('puzzle2').style.display = 'block';
                 result.textContent = '';
@@ -153,7 +154,7 @@
                 result.className = 'incorrect';
             }
         }
-
+        
         function checkAnswer2() {
             const answer = document.getElementById('answer2').value.trim().toLowerCase();
             const result = document.getElementById('result2');
