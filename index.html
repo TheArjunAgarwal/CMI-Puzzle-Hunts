@@ -37,7 +37,7 @@
     </style>
 </head>
 <body>
-    <div id="rules">
+    <div id="puzzle0">
         <h1>Rules</h1>
         <div class="flavor-text">
             As we didn't have time to do a proper tresure hunt, here is a semi-online tresure hunt. There is a special sticker(hidden) finding which will make you the winner, and it will be obvious if and when you find it.
@@ -51,7 +51,7 @@
         </ul>
         <input type="text" id="answer0" placeholder="Enter answer">
         <button onclick="checkAnswer0()">Submit</button>
-        <p id="result1"></p>
+        <p id="result0"></p>
     </div>
     
     <div id="puzzle1">
@@ -152,8 +152,8 @@
             const answer = document.getElementById('answer0').value.trim().toLowerCase();
             const result = document.getElementById('result0');
             if (answer === 'arjun maneesh agarwal') {
-                document.getElementById('puzzle1').style.display = 'none';
-                document.getElementById('puzzle2').style.display = 'block';
+                document.getElementById('puzzle0').style.display = 'none';
+                document.getElementById('puzzle1').style.display = 'block';
                 result.textContent = '';
             } else {
                 result.textContent = 'Incorrect answer. Try again!';
