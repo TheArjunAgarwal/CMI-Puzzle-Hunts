@@ -37,6 +37,23 @@
     </style>
 </head>
 <body>
+    <div id="rules">
+        <h1>Rules</h1>
+        <div class="flavor-text">
+            As we didn't have time to do a proper tresure hunt, here is a semi-online tresure hunt. There is a special sticker(hidden) finding which will make you the winner, and it will be obvious if and when you find it.
+            The answers to everything in the online phrase is a word. No spaces, no caps.
+            While you will need to stretch these rules and interpret others broadly, please don't break into anyplace you are not allowed to.
+            Other than that, let the hunt begin!
+        </div>
+        <p>Hints:</p>
+        <ul>
+            <li>The first answer is just my name.</li>
+        </ul>
+        <input type="text" id="answer0" placeholder="Enter answer">
+        <button onclick="checkAnswer0()">Submit</button>
+        <p id="result1"></p>
+    </div>
+    
     <div id="puzzle1">
         <h1>Puzzle 1: Pokemon Password</h1>
         <div class="flavor-text">
@@ -62,7 +79,7 @@
         <div class="flavor-text">
             I don't know what to flavor text this, like the title is itself flavour.
         </div>
-        <img src="puzzlehunt2025/puz2.png" alt="Puzzle 2 Image" class="puzzle-image">
+        <img src="puz2.png" alt="Puzzle 2 Image" class="puzzle-image">
         <p>Riddles:</p>
         <ul>
             <li>Sherlock saw the sign of men is a boat, he now reasons why (3)</li>
@@ -127,10 +144,22 @@
 
     <div id="final" style="display:none;">
         <h1>Congratulations!</h1>
-        <p>You've completed the puzzle hunt!</p>
+        <p>You've completed the puzzle hunt!(or atleast the online part. Piece the things together and try to find the prize sticker!)</p>
     </div>
 
     <script>
+        function checkAnswer0() {
+            const answer = document.getElementById('answer0').value.trim().toLowerCase();
+            const result = document.getElementById('result0');
+            if (answer === 'arjun maneesh agarwal') {
+                document.getElementById('puzzle1').style.display = 'none';
+                document.getElementById('puzzle2').style.display = 'block';
+                result.textContent = '';
+            } else {
+                result.textContent = 'Incorrect answer. Try again!';
+                result.className = 'incorrect';
+            }
+        }
         function checkAnswer1() {
             const answer = document.getElementById('answer1').value.trim().toLowerCase();
             const result = document.getElementById('result1');
