@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle Hunt</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            text-align: center; 
+        }
+        .flavor-text { 
+            font-style: italic; 
+            margin-bottom: 20px; 
+        }
+        input { 
+            margin: 20px 0; 
+            padding: 10px; 
+            width: 300px; 
+        }
+        .incorrect { 
+            color: red; 
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f4f4f4;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="puzzle1">
+        <h1>Puzzle 1: Pokemon Password</h1>
+        <div class="flavor-text">
+            Arjun loves pokemon a lot. And he is often irritated that other people don't. 
+            Thus, he has decided to force them to atleast learn pokemon by keeping this hunt guarded behind a password.
+        </div>
+        <p>Hints:</p>
+        <ul>
+            <li>Duel-typed</li>
+            <li>Hates ice</li>
+            <li>Can't evolve</li>
+            <li>Gen III</li>
+            <li>680</li>
+            <li>Mythology</li>
+        </ul>
+        <input type="text" id="answer1" placeholder="Enter answer">
+        <button onclick="checkAnswer1()">Submit</button>
+        <p id="result1"></p>
+    </div>
+
+    <div id="puzzle2" style="display:none;">
+        <h1>Puzzle 2: Pigpen Books</h1>
+        <div class="flavor-text">
+            I don't know what to flavor text this, like the title is itself flavour.
+        </div>
+        <p>Riddles:</p>
+        <ul>
+            <li>Sherlock saw the sign of men is a boat, he now reasons why (3)</li>
+            <li>To survive in this slaughterhouse, a ready player should be able to catch anything without high Fahrenheit temperatures hindering their performance. (4)</li>
+            <li>Evelyn Hugo, Daisy Jones and teens of 84 (3)</li>
+        </ul>
+        <input type="text" id="answer2" placeholder="Enter answer">
+        <button onclick="checkAnswer2()">Submit</button>
+        <p id="result2"></p>
+    </div>
+
+    <div id="puzzle3" style="display:none;">
+        <h1>Puzzle 3: Can you hear the music?</h1>
+        <div class="flavor-text">
+            Music links
+        </div>
+        <p>Links:</p>
+        <ul>
+            <li>https://www.youtube.com/watch?v=ktvTqknDobU</li>
+            <li>https://www.youtube.com/watch?v=HNBCVM4KbUM</li>
+            <li>https://www.youtube.com/watch?v=PEnJbjBuxnw</li>
+        </ul>
+        <input type="text" id="answer3" placeholder="Enter answer">
+        <button onclick="checkAnswer3()">Submit</button>
+        <p id="result3"></p>
+    </div>
+
+    <div id="puzzle4" style="display:none;">
+        <h1>Puzzle 4: Insomnia</h1>
+        <div class="flavor-text">
+            Hint: I suffer from this. Actually most of this collage does.
+        </div>
+        <p>Clues:</p>
+        <ul>
+            <li>"Is ___ OK?" (Common server query) (5)</li>
+            <li>Snack that's smooth, rich, and melts? (9)</li>
+            <li>Italian word for "pressed out" (8)</li>
+            <li>Gossip, in slang (3)</li>
+            <li>Frightening creature, men sort rearranged (7)</li>
+        </ul>
+        <input type="text" id="answer4" placeholder="Enter answer">
+        <button onclick="checkAnswer4()">Submit</button>
+        <p id="result4"></p>
+    </div>
+
+    <div id="puzzle5" style="display:none;">
+        <h1>Puzzle 5: Satyen is here</h1>
+        <div class="flavor-text">
+            Hint: It's not that hard.
+        </div>
+        <p>Themes:</p>
+        <ul>
+            <li>The World Ends</li>
+            <li>Ebola</li>
+            <li>Brexit</li>
+            <li>Writers Strike</li>
+        </ul>
+        <input type="text" id="answer5" placeholder="Enter answer">
+        <button onclick="checkAnswer5()">Submit</button>
+        <p id="result5"></p>
+    </div>
+
+    <div id="final" style="display:none;">
+        <h1>Congratulations!</h1>
+        <p>You've completed the puzzle hunt!</p>
+    </div>
+
+    <script>
+        function checkAnswer1() {
+            const answer = document.getElementById('answer1').value.trim().toLowerCase();
+            const result = document.getElementById('result1');
+            if (answer === 'rayquaza') {
+                document.getElementById('puzzle1').style.display = 'none';
+                document.getElementById('puzzle2').style.display = 'block';
+                result.textContent = '';
+            } else {
+                result.textContent = 'Incorrect answer. Try again!';
+                result.className = 'incorrect';
+            }
+        }
+
+        function checkAnswer2() {
+            const answer = document.getElementById('answer2').value.trim().toLowerCase();
+            const result = document.getElementById('result2');
+            if (answer === 'aft') {
+                document.getElementById('puzzle2').style.display = 'none';
+                document.getElementById('puzzle3').style.display = 'block';
+                result.textContent = '';
+            } else {
+                result.textContent = 'Incorrect answer. Try again!';
+                result.className = 'incorrect';
+            }
+        }
+
+        function checkAnswer3() {
+            const answer = document.getElementById('answer3').value.trim().toLowerCase();
+            const result = document.getElementById('result3');
+            if (answer === 'trinity') {
+                document.getElementById('puzzle3').style.display = 'none';
+                document.getElementById('puzzle4').style.display = 'block';
+                result.textContent = '';
+            } else {
+                result.textContent = 'Incorrect answer. Try again!';
+                result.className = 'incorrect';
+            }
+        }
+
+        function checkAnswer4() {
+            const answer = document.getElementById('answer4').value.trim().toLowerCase();
+            const result = document.getElementById('result4');
+            if (answer === 'caffine') {
+                document.getElementById('puzzle4').style.display = 'none';
+                document.getElementById('puzzle5').style.display = 'block';
+                result.textContent = '';
+            } else {
+                result.textContent = 'Incorrect answer. Try again!';
+                result.className = 'incorrect';
+            }
+        }
+
+        function checkAnswer5() {
+            const answer = document.getElementById('answer5').value.trim().toLowerCase();
+            const result = document.getElementById('result5');
+            if (answer === 'cmi') {
+                document.getElementById('puzzle5').style.display = 'none';
+                document.getElementById('final').style.display = 'block';
+                result.textContent = '';
+            } else {
+                result.textContent = 'Incorrect answer. Try again!';
+                result.className = 'incorrect';
+            }
+        }
+    </script>
+</body>
+</html>
