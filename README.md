@@ -1,5 +1,7 @@
 # CMI Puzzle Hunts
 
-Ever since 2025, I normally serve as the puzzle setter for CMI's puzzle hunts.
+Since 2025, I’ve been serving as the puzzle setter for **CMI’s Puzzle Hunts**.
 
-The format for these hunts usually have 6 puzzles with the answers being things on the campus. Some questions use specifics from CMI culture. Some of the questions have not been put up as I didn't set them and hence, didn't have them at time of making the repo. Will add them all at some point of time.
+These hunts typically feature **six puzzles**, with the **answers referring to locations or things on the CMI campus**. Some puzzles also include references to **CMI-specific culture and/or inside jokes**.
+
+Not all the puzzles are currently uploaded as few were set by others and weren’t available at the time of creating this repository. I plan to add those as and when I get them.
